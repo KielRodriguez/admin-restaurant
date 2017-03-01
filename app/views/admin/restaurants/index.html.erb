@@ -1,2 +1,17 @@
-<h1>Admin::Restaurants#index</h1>
-<p>Find me in app/views/admin/restaurants/index.html.erb</p>
+<h1 class="text-center">Gestion de Restaurantes</h1>
+
+<div class="row">
+    <% @restaurants.each do |restaurant| %>
+        <div class="col-xs-12 col-md-6 col-lg-4">
+        <section class="card-restaurant">    
+            <heaede>
+                <h3 class="text-center"><%= restaurant.name.capitalize %></h3>
+            </heaede>
+            <p class="text-center">
+                <%= restaurant.description.capitalize %>
+            </p>
+            <a href="#" class="btn btn-success btn-block">Editar</a>
+        </section>
+        </div>
+    <% end%>
+</div>
